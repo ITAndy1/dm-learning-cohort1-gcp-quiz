@@ -71,12 +71,10 @@ six==1.16.0
 striprtf==0.0.26
 tensorboard==2.16.2
 tensorboard-data-server==0.7.2
-tensorflow==2.16.1
 termcolor==2.4.0
 textblob==0.18.0.post0
 threadpoolctl==3.5.0
 tqdm==4.66.5
-tweepy==4.14.0
 typing_extensions==4.11.0
 tzdata==2024.1
 urllib3==2.2.1

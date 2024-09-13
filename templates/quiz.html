@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz - Question {{ index }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Question {{ index }}</h2>
+        <p>{{ question['question'] }}</p>
+        <form method="POST">
+            {% for option in question['options'] %}
+            <div>
+                <input type="radio" id="{{ option }}" name="option" value="{{ option }}" required>
+                <label for="{{ option }}">{{ option }}</label>
+            </div>
+            {% endfor %}
+            <button type="submit">Next</button>
+        </form>
+    </div>
+</body>
+</html>

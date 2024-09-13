@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>User Quiz Results</h2>
+        <table>
+            <tr>
+                <th>User ID</th>
+                <th>Name</th>
+                <th>Answers</th>
+                <th>Score</th>
+            </tr>
+            {% for user_id, result in results.items() %}
+            <tr>
+                <td>{{ user_id }}</td>
+                <td>{{ result['name'] }}</td>
+                <td>{{ result['answers'] }}</td>
+                <td>{{ result['score'] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+</body>
+</html>
